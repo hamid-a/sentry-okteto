@@ -597,7 +597,7 @@ filestore:
       ##
       # storageClass: "-"
       accessMode: ReadWriteOnce
-      size: 1Gi
+      size: 10Gi
 
       ## Whether to mount the persistent volume to the Sentry worker and
       ## cron deployments. This setting needs to be enabled for some advanced
@@ -664,7 +664,7 @@ clickhouse:
         enabled: true
         accessModes:
         - "ReadWriteOnce"
-        storage: "1Gi"
+        storage: "30Gi"
 
   ## Use this to enable an extra service account
   # serviceAccount:

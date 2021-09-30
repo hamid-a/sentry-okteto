@@ -1,2 +1,10 @@
 deploy:
-  - helm upgrade --install sentry .
+  - helm upgrade --install sentry . \
+    --set filestore.filesystem.persistence.size=1Gi \
+    --set clickhouse.enabled=false \
+    --set kafka.enabled=false \
+    --set redis.enabled=false \
+    --set postgresql.enabled=false \
+    --set rabbitmq.enabled=fasle \
+    --set metrics.enabled=false
+
